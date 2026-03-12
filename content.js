@@ -1,0 +1,1 @@
+alert("must be printed everywhere")
