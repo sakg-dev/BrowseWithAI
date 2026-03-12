@@ -3,4 +3,7 @@ Several other features as well
 
 MVP:
 - [x] Setup Chrome Extension
-- [ ] give option on select and hover
+- [x] Give option on select and right click
+- [ ] Send req to hc ai
+- [ ] Make a dialog where append the ai text
+- [ ] Make a popup where user will enter base url and API Key, keep it secure somewhere.
