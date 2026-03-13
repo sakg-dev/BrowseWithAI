@@ -5,6 +5,6 @@ MVP:
 - [x] Setup Chrome Extension
 - [x] Give option on select and right click
 - [x] Send req to hc ai
-- [ ] Make a dialog and show loading bar
+- [x] Make a dialog and show loading bar
 - [ ] Append the ai text on the dialog
 - [ ] Make a popup where user will enter base url and API Key, keep it secure somewhere.
