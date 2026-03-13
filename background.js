@@ -17,7 +17,7 @@ const explain = async (selectionText) => {
     })
     const res = await req.json()
 
-    // const mess = await chrome.tabs.sendMessage(currentTabId, { action: "explain", progress: "done", content: res["choices"][0]["message"]["content"] })
+    await chrome.tabs.sendMessage(currentTabId, { action: "explain", progress: "done", content: res["choices"][0]["message"]["content"], uid })
 }
 
 

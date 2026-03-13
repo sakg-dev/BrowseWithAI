@@ -6,5 +6,6 @@ MVP:
 - [x] Give option on select and right click
 - [x] Send req to hc ai
 - [x] Make a dialog and show loading bar
-- [ ] Append the ai text on the dialog
+- [x] Append the ai text on the dialog
+- [ ] Style the dialog and make it work on every situation
 - [ ] Make a popup where user will enter base url and API Key, keep it secure somewhere.

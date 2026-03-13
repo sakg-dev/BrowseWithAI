@@ -20,13 +20,18 @@ const createLoadingDialog = () => {
     return uid
 }
 
+const updateDialogWithTxt = (explanation, uid) => {
+    const dialog = document.getElementById(`explain_${uid}`)
+    dialog.innerText = explanation
+}
+
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     if (message?.action == "explain") {
         if (message?.progress == "sending") {
             const uid = createLoadingDialog()
             sendResponse({ uid })
         } else if (message?.progress == "done") {
-
+            updateDialogWithTxt(message?.content, message?.uid)
         }
     }
     return true
