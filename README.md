@@ -9,3 +9,7 @@ MVP:
 - [x] Append the ai text on the dialog
 - [ ] Style the dialog and make it work on every situation
 - [ ] Make a popup where user will enter base url and API Key, keep it secure somewhere.
+
+Some other things:
+- Take the title and url of website to understand what it is related to.
+- 
