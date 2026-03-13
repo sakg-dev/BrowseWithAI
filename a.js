@@ -15,3 +15,6 @@
 //     const res = await req.json()
 //     console.log(res["choices"][0]["message"]["content"])
 // })()
+
+// const smallerSide = [2,5,1,7].sort()
+// console.log(smallerSide)

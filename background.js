@@ -1,7 +1,7 @@
 let currentTabId = 0
 
 const explain = async (selectionText) => {
-    const { uid } = await chrome.tabs.sendMessage(currentTabId, { action: "explain", progress: "sending" })
+    const { uid, smallerXSide, smallerXSideName } = await chrome.tabs.sendMessage(currentTabId, { action: "explain", progress: "sending" })
     const req = await fetch("https://ai.hackclub.com/proxy/v1/chat/completions", {
         method: "POST",
         headers: {
@@ -11,13 +11,13 @@ const explain = async (selectionText) => {
         body: JSON.stringify({
             model: "google/gemini-2.5-flash",
             messages: [
-                { role: "user", content: `Explain the following ${selectionText.includes(" ") ? "sentence" : "word"} briefly and clearly (no unnecessary details): "${selectionText}".` }
+                { role: "user", content: `Explain the meaning briefly and clearly in one sentence.\nDo not repeat the word or phrase being explained.\nReturn only the explanation as plain text without formatting.\nText: "${selectionText}"` }
             ]
         }),
     })
     const res = await req.json()
 
-    await chrome.tabs.sendMessage(currentTabId, { action: "explain", progress: "done", content: res["choices"][0]["message"]["content"], uid })
+    await chrome.tabs.sendMessage(currentTabId, { action: "explain", progress: "done", content: res["choices"][0]["message"]["content"], uid, smallerXSide, smallerXSideName })
 }
 
 

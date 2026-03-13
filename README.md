@@ -7,7 +7,8 @@ MVP:
 - [x] Send req to hc ai
 - [x] Make a dialog and show loading bar
 - [x] Append the ai text on the dialog
-- [ ] Style the dialog and make it work on every situation
+- [x] Style the dialog and make it work on every situation
+<!-- - [ ] Make such that user can close the diialog by clicking smwhere else but keep a bubble like in top-right -->
 - [ ] Make a popup where user will enter base url and API Key, keep it secure somewhere.
 
 Some other things:
